@@ -30,11 +30,11 @@ body{
 
 main{
     color: white;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 38px);
     display: grid;
 
     grid-template-columns: 10px 1fr 10px;
-
+    grid-template-rows: 1fr 2fr;
     justify-items: center;
     align-items: center;
 }
@@ -48,6 +48,8 @@ div{
 }
 
 #perfil{
+    padding: 10px;
+    grid-row: 1 / 2;
     text-align: center;
 }
 
@@ -79,13 +81,12 @@ div{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4em;
     color: var(--color01);
-    padding: 5px;
 }
 
 #perfil h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #perfil p{
@@ -98,13 +99,22 @@ div{
     text-shadow: 0px 0px 15px yellow;
 }
 
-main a{
+.link-container{
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.link-container a{
+    text-decoration: none;
+}
+
+.link-container a p{
     grid-column: 2;
-    width: 70%;
-    justify-items: center;
 
     color: white;
-    text-decoration: none;
     border-radius: 8px;
     border: 1px solid var(--color01);
     box-shadow: 0px 0px 8px var(--color01);
@@ -116,7 +126,7 @@ main a{
 }
 
 
-main a:hover{
+main a p:hover {
     background-color: #591b9750;
     transform: translateY(-5px) ;
     transition: 0.4s;
@@ -142,11 +152,11 @@ footer p a:hover{
 @media screen and (min-width: 768px){
 
     #perfil img{
-        width: 20%;
+        width: 30%;
         transition: ease 1s;
     }
 
-    a{
+    .link-container{
         transition: ease 1s;
         max-width: 30%;
     }
