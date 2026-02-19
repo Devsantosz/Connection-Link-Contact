@@ -34,23 +34,26 @@ main{
     display: grid;
 
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 40% 1fr;
     justify-items: center;
     align-items: center;
+
+    padding: 10px;
 }
 
 div{
     grid-column: 2;
     max-width: 80%;
     
-
+    transition: ease 1s;
     background: transparent;
 }
 
 #perfil{
-    padding: 10px;
     grid-row: 1 / 2;
     text-align: center;
+
+    transition: ease 1s;
 }
 
 #perfil img{
